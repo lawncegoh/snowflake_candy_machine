@@ -143,6 +143,7 @@ const Home = (props: HomeProps) => {
             message: "Congratulations! Mint succeeded!",
             severity: "success",
           });
+          window.location.href = "https://polanabears.com/mintform";
         } else {
           setAlertState({
             open: true,
@@ -154,7 +155,6 @@ const Home = (props: HomeProps) => {
     } catch (error: any) {
       // TODO: blech:
       let message = error.msg || "Minting failed! Please try again!";
-      window.location.href = "https://polanabears.com/mintform";
       if (!error.msg) {
         if (error.message.indexOf("0x138")) {
         } else if (error.message.indexOf("0x137")) {
